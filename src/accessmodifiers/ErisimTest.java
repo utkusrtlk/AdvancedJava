@@ -6,8 +6,8 @@ public class ErisimTest {
 		
 		Test testObjesi = new Test();
 		
-		System.out.println("Erisebildigim degiskenler : " +
-		testObjesi.duz + " " + testObjesi.herkese + " " + testObjesi.korumali);
+		System.out.println("Erisebildigim degiskenler : \n" +
+		testObjesi.duz + "\n" + testObjesi.herkese + "\n" + testObjesi.korumali);
 
 		System.out.println("Gizli :" + testObjesi.getGizli());
 	}

@@ -3,11 +3,15 @@ package abstractclass.and.interfaces;
 public class TestClass {
 	  
 	public static void main(String args[]){  
-		//Insan obje= new Insan(182,95);  
-		Bina obje = new Bina();
+		Insan obje= new Insan(182,95);  
 		System.out.println(obje.boyMetre());  
 		System.out.println(obje.boySantimetre());
 		System.out.println(obje.boyKilometre());
+
+		Bina obje1 = new Bina();
+		System.out.println(obje1.boyMetre());  
+		System.out.println(obje1.boySantimetre());
+		System.out.println(obje1.boyKilometre());
 	}
 }
 

@@ -3,26 +3,47 @@ package java8;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 public class NewFeatures {
 
 	public static void main(String[] args) {
+		//Lambda Expressions
+		ArrayList<Integer> numbers = new ArrayList<Integer>();
+	    numbers.add(5);
+	    numbers.add(9);
+	    numbers.add(8);
+	    numbers.add(1);
+	    
+	    //numbers.forEach( (n) -> { System.out.println(n); } );
+	    Consumer<Integer> method = (n) -> { System.out.println(n); };
+	    numbers.forEach( method );
+		
 		List<User> users = new ArrayList<>();		
 		users.add(new User(1,"Aleyna"));
 		users.add(new User(2,"Ahmet"));
 		users.add(new User(3,"Zehra"));
 		users.add(new User(4,"Murat"));
-		users.add(new User(5,"Yýldýz"));
+		users.add(new User(5,"Yï¿½ldï¿½z"));
 		users.add(new User(6,"Levent"));
 		users.add(new User(7,"Elvan"));
 		
-		//users.stream().forEach(user -> user.talk());
-		users.stream().forEach(User::talk);//method reference
+		users.stream().forEach(user->
+		{
+			System.out.println("Java8");
+			System.out.println(user.toString());
+		});
+		
+		users.stream().forEach(user -> user.talk()); //lambda function
+		users.stream().forEach(User::talk);//method 
+
+		long count =users.stream().filter(user -> user.id>5).count();
+		System.out.println("Count :"+count);
 		
 		List<User> filteredList = users.stream().filter(user -> user.id>5)
-				.collect(Collectors.toList());
-		System.out.println("Filtered");
+				.collect(Collectors.toList());   //collectors
+		System.out.println("Filtered idd > 5");
 		filteredList.stream().forEach(User::talk);
 		
 		List<User> mappedList = users.stream()

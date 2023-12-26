@@ -16,8 +16,8 @@ public class Test {
 		
 		Test testObjesi = new Test();
 		
-		System.out.println("Erisebildigim degiskenler : " + testObjesi.gizli +
-		testObjesi.duz + " " + testObjesi.herkese + " " + testObjesi.korumali);
+		System.out.println("Erisebildigim degiskenler : \n" + testObjesi.gizli +"\n"+
+		testObjesi.duz + "\n" + testObjesi.herkese + "\n" + testObjesi.korumali);
 
 	}
 }

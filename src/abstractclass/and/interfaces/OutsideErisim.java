@@ -8,8 +8,8 @@ public class OutsideErisim extends Test{
 
 		OutsideErisim outsideErisimObjesi = new OutsideErisim();
 		
-		System.out.println("Eristigim degiskenler : " + 
-				outsideErisimObjesi.korumali + outsideErisimObjesi.herkese);
+		System.out.println("Eristigim degiskenler : \n" + 
+				outsideErisimObjesi.korumali +"\n"+ outsideErisimObjesi.herkese);
 
 	}
 
